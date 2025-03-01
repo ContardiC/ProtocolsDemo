@@ -1,11 +1,26 @@
-//
-//  main.swift
-//  ProtocolsDemo
-//
-//  Created by Carlo Contardi on 01/03/25.
-//
 
-import Foundation
+class Bird{
+    var isFemale = true
+    
+    func layEgg(){
+        if isFemale{
+            print("The bird makes a new bird in a shell.")
+        }
+    }
 
-print("Hello, World!")
+    func fly(){
+        print("The bird flaps its wings and lifts off into the sky.")
+    }
+        
+}
 
+class Eagle: Bird{
+    func soar(){
+        print("The eagle glides in the air using air currents.")
+    }
+}
+
+
+let myEagle =  Eagle()
+myEagle.fly()
+myEagle.layEgg()
