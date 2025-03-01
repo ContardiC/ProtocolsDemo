@@ -26,13 +26,16 @@ class Penguin: Bird{
     }
 }
 struct FlyMuseum{
-    func flyingDemo(flyingObject: Eagle){
+    // specifico che il flyingObject deve adottare questo protocollo !
+    func flyingDemo(flyingObject: CanFly){
         flyingObject.fly()
     }
 }
 
-struct Airplane{
-    
+struct Airplane: CanFly{
+    func fly() {
+        print("The airplane uses its engine to ligt off into the air.")
+    }
 }
 let myEagle =  Eagle()
 //myEagle.fly()
